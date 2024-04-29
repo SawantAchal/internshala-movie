@@ -9,11 +9,9 @@ const MovieItem = ({movie}) => {
       navigate(`/movie/${imdbmovieid}`)
     }
   return (
-    <div className="movie-item" onClick={handleClick}>
-      <img src={moviemainphotos} alt={movietitle} />
-      <div>
-        <h2>{movietitle}</h2>
-      </div>
+    <div className="movie-item flex items-center justify-center  flex-col cursor-pointer border border-black gap-6 text-center p-3 rounded-lg" onClick={handleClick}>
+      <img src={moviemainphotos} alt={movietitle} className='text-center w-full rounded-lg'/>
+        <h2 className='bg-gray-800 w-full p-3 text-white rounded-lg'>{movietitle}</h2>
     </div>
   )
 }
