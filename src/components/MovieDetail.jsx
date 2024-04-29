@@ -11,7 +11,8 @@ const MovieDetail = ({ movies }) => {
   }
 
   return (
-    <div className="container mx-auto px-4 pt-20 h-screen">
+    <div className="container mx-auto px-4 md:pt-24 pt-64 md:h-screen h-full text-white  ">
+      <h2 className="text-4xl font-semibold mb-4 text-center ">{movie.movietitle}</h2>
       <div className="flex flex-col lg:flex-row items-center justify-center">
         <div className="lg:w-1/2 lg:mr-10 h-[35rem] w-64">
           <img
@@ -21,11 +22,9 @@ const MovieDetail = ({ movies }) => {
           />
         </div>
         <div className="lg:w-1/2 lg:ml-10">
-          <h2 className="text-3xl font-semibold mb-4">{movie.movietitle}</h2>
-          <p>IMDb ID: {movie.imdbmovieid}</p>
           <div className="mb-2">
-            <p>Languages:</p>
-            <div className="flex flex-wrap">
+            <p className='text-xl'>Languages:</p>
+            <div className="flex flex-wrap pt-3">
               {movie.movielanguages.map(language => (
                 <div key={language} className="border rounded-md p-1 mr-2 mb-2">
                   {language}
@@ -34,8 +33,8 @@ const MovieDetail = ({ movies }) => {
             </div>
           </div>
           <div className="mb-2">
-            <p>Countries:</p>
-            <div className="flex flex-wrap">
+            <p className='text-2xl'>Countries:</p>
+            <div className="flex flex-wrap pt-3">
               {movie.moviecountries.map(country => (
                 <div key={country} className="border rounded-md p-1 mr-2 mb-2">
                   {country}
@@ -44,8 +43,8 @@ const MovieDetail = ({ movies }) => {
             </div>
           </div>
           <div className="mb-2">
-            <p>Genres:</p>
-            <div className="flex flex-wrap">
+            <p className='text-2xl'>Genres:</p>
+            <div className="flex flex-wrap pt-3">
               {movie.moviegenres.map(genre => (
                 <div key={genre} className="border rounded-md p-1 mr-2 mb-2">
                   {genre}
@@ -53,7 +52,7 @@ const MovieDetail = ({ movies }) => {
               ))}
             </div>
           </div>
-          <button onClick={() => navigate('/')} className="px-4 py-2 bg-blue-500 text-white rounded-md transition-colors hover:bg-blue-600 focus:outline-none"
+          <button onClick={() => navigate('/')} className="px-4 py-2  text-white rounded-md transition-colors  focus:outline-none mb-8 bg-gradient-to-r from-gray-900 to-red-700 hover:bg-gradient-to-r hover:from-red-700 hover:to-gray-900"
           >
             Back to Movies
           </button>
