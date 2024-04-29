@@ -54,7 +54,7 @@ const Navbar = ({ movies, onFilterChange, onClearFilters }) => {
     <nav  className="bg-gradient-to-r from-zinc-900 to-red-700  p-4 fixed w-full cursor-pointer">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center">
-          <h1 className="text-white text-lg font-bold mb-2 lg:mb-0">Movie</h1>
+          <h1 className="text-white text-2xl font-bold mb-2 lg:mb-0">Movie</h1>
           <div className="md:flex flex-col lg:flex-row items-center ">
             <div className="flex flex-col lg:flex-row">
               {/* Language filter */}

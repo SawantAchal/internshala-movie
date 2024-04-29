@@ -15,11 +15,7 @@ const MovieDetail = ({ movies }) => {
       <h2 className="text-4xl font-semibold mb-4 text-center ">{movie.movietitle}</h2>
       <div className="flex flex-col lg:flex-row items-center justify-center">
         <div className="lg:w-1/2 lg:mr-10 h-[35rem] w-64">
-          <img
-            src={movie.moviemainphotos}
-            alt={movie.movietitle}
-            className="w-full mb-4 h-full"
-          />
+          <img src={movie.moviemainphotos} alt={movie.movietitle} className="w-full mb-4 h-full"/>
         </div>
         <div className="lg:w-1/2 lg:ml-10">
           <div className="mb-2">
@@ -52,8 +48,7 @@ const MovieDetail = ({ movies }) => {
               ))}
             </div>
           </div>
-          <button onClick={() => navigate('/')} className="px-4 py-2  text-white rounded-md transition-colors  focus:outline-none mb-8 bg-gradient-to-r from-gray-900 to-red-700 hover:bg-gradient-to-r hover:from-red-700 hover:to-gray-900"
-          >
+          <button onClick={() => navigate('/')} className="px-4 py-2  text-white rounded-md transition-colors  focus:outline-none mb-8 bg-gradient-to-r from-gray-900 to-red-700 hover:bg-gradient-to-r hover:from-red-700 hover:to-gray-900">
             Back to Movies
           </button>
         </div>
