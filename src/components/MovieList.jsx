@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import MovieData from '../data/MovieData'
 import MovieItem from './MovieItem'
 import { useLocation } from 'react-router-dom';
 
@@ -28,7 +27,7 @@ const MovieList = ({ movies }) => {
   }, [location.search, movies]);
 
   return (
-    <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-gray-300 p-9 gap-4 text-center pt-20'>
+    <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg--300 p-9 gap-4 text-center pt-20'>
       {
         filteredMovies.map((movie , i) => (
           <MovieItem key={i} movie={movie}/>

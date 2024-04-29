@@ -20,15 +20,15 @@ function App() {
 
 
   return (
-    <>
+    <div className='bg-gradient-to-r from-red-700 to-zinc-900 h-full'>
       <BrowserRouter>
       <Navbar movies={movies} onFilterChange={handleFilterChange} onClearFilters={handleClearFilters}/>
         <Routes>
-        <Route path='/' element={<MovieList movies={movies}/>}/>
+          <Route path='/' element={<MovieList movies={movies}/>}/>
           <Route path='/movie/:imdbmovieid' element={<MovieDetail movies={MovieData}/>}/>
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
